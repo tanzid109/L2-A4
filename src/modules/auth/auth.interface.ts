@@ -6,3 +6,8 @@ export interface IRegisterUser {
   activeStatus: "ACTIVE" | "BANNED";
   role: "TENANT" | "LANDLORD" | "ADMIN";
 }
+
+export interface ILoginUser {
+  email: string;
+  password: string;
+}
