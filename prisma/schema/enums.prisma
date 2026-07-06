@@ -1,0 +1,17 @@
+enum UserStatus {
+  ACTIVE
+  BANNED
+}
+
+enum Role {
+  TENANT
+  LANDLORD
+  ADMIN
+}
+
+enum PropertyStatus {
+  AVAILABLE
+  RENTED
+  PENDING
+  INACTIVE
+}

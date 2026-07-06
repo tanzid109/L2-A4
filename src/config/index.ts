@@ -1,0 +1,15 @@
+import dotenv from "dotenv";
+import path from "path";
+
+dotenv.config({ path: path.join(process.cwd(), ".env") });
+
+export default {
+    port: process.env.PORT || 5000,
+    databaseUrl: process.env.DATABASE_URL,
+    app_url: process.env.APP_URL || "http://localhost:5000",
+    bcrypt_salt_rounds: process.env.BCRYPT_SALT_ROUNDS || 10,
+    jwt_access_secret: process.env.JWT_ACCESS_SECRET ||"jwt_access_secret" as string,
+    jwt_refresh_secret: process.env.JWT_REFRESH_SECRET ||"jwt_refresh_secret" as string,
+    jwt_access_expiration: process.env.JWT_ACCESS_EXPIRATION || "15m" as string,
+    jwt_refresh_expiration: process.env.JWT_REFRESH_EXPIRATION || "7d" as string
+}
