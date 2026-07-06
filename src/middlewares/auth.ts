@@ -59,6 +59,7 @@ export const auth = (...requiredRoles: Role[]) => {
       throw new Error("Your account is banned.please contact support");
     }
 
+
     req.user = {
       name,
       email,
