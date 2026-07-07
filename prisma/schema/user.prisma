@@ -9,8 +9,10 @@ model User {
   createdAt    DateTime   @default(now())
   updatedAt    DateTime   @updatedAt
 
-  property Property[]
-  category Category[]
+  properties     Property[]
+  categories     Category[]
+  rentalRequests RentalRequest[]
+  reviews        Review[]
 
   @@map("users")
 }

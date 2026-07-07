@@ -1,0 +1,18 @@
+model RentalRequest {
+  id         String       @id @default(uuid())
+  propertyId String
+  tenantId   String
+  status     RentalStatus @default(PENDING)
+  startDate  DateTime?
+  endDate    DateTime?
+  totalPrice Float?
+  createdAt  DateTime     @default(now())
+  updatedAt  DateTime     @updatedAt
+
+  property Property @relation(fields: [propertyId], references: [id])
+  tenant   User     @relation(fields: [tenantId], references: [id])
+
+  payment Payment?
+
+  @@map("rental_requests")
+}

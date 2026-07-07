@@ -12,6 +12,24 @@ enum Role {
 enum PropertyStatus {
   AVAILABLE
   RENTED
-  PENDING
   INACTIVE
+}
+
+enum RentalStatus {
+  PENDING
+  APPROVED
+  REJECTED
+  ACTIVE
+  COMPLETED
+}
+
+enum PaymentProvider {
+  STRIPE
+  SSLCOMMERZ
+}
+
+enum PaymentStatus {
+  PENDING
+  SUCCESS
+  FAILED
 }
