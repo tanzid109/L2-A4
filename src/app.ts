@@ -4,8 +4,7 @@ import { authRoutes } from "./modules/auth/auth.route";
 import { categoryRoutes } from "./modules/category/category.route";
 import { propertyRoutes } from "./modules/properties/properties.route";
 import { landlordRoutes } from "./modules/landlord/landlord.route";
-
-
+import { rentalRoutes } from "./modules/rentalRequest/rental.route";
 
 const app: Application = express();
 
@@ -17,9 +16,10 @@ app.get("/", async (req: Request, res: Response) => {
   res.send("Hello RentNest API");
 });
 
-app.use("/api/auth",authRoutes)
+app.use("/api/auth", authRoutes);
 app.use("/api/category", categoryRoutes);
 app.use("/api/property", propertyRoutes);
 app.use("/api/landlord/properties", landlordRoutes);
+app.use("/api/rentals", rentalRoutes);
 
 export default app;
