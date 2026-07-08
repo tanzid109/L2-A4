@@ -1,7 +1,11 @@
 import { Router } from "express";
+import { Role } from "../../../generated/prisma/enums";
+import { auth } from "../../middlewares/auth";
+import { reviewController } from "./review.controller";
 
 const router = Router();
 
-router.post("/")
+router.post("/:propertyId", auth(Role.TENANT), reviewController.createReview);
+router.get("/", reviewController.getAllReviews);
 
-export const rentalRoutes = router;
+export const reviewRoutes = router;
