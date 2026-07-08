@@ -137,7 +137,6 @@ const rentalRequestStatusFromDB = async (
     throw new Error("Rental request not found");
   }
 
-  // Admin can manage everything
   if (role !== "ADMIN" && rentalRequest.property.landlordId !== landlordId) {
     throw new Error("Unauthorized");
   }

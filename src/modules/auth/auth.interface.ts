@@ -3,8 +3,7 @@ export interface IRegisterUser {
   email: string;
   password: string;
   phone: string;
-  activeStatus: "ACTIVE" | "BANNED";
-  role: "TENANT" | "LANDLORD" | "ADMIN";
+  role: "TENANT" | "LANDLORD";
 }
 
 export interface ILoginUser {

@@ -6,7 +6,10 @@ import { jwtUtils } from "../../utils/jwt";
 import { JwtPayload, SignOptions } from "jsonwebtoken";
 
 const registerUserInDB = async (payload: IRegisterUser) => {
-  const { name, email, password, phone, activeStatus, role } = payload;
+  const { name, email, password, phone, role } = payload;
+  if (role !== "TENANT" && role !== "LANDLORD") {
+    throw new Error("Invalid role. Must be TENANT or LANDLORD");
+  }
 
   const isExistingUser = await prisma.user.findUnique({ where: { email } });
   if (isExistingUser) {
@@ -24,7 +27,6 @@ const registerUserInDB = async (payload: IRegisterUser) => {
       email,
       password: hashPassword,
       phone,
-      activeStatus,
       role,
     },
   });
