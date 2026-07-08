@@ -15,10 +15,14 @@ router.get(
 
 router.get(
   "/landlord",
-  auth(Role.TENANT),
+  auth(Role.LANDLORD),
   rentalController.getAllLandlordRequest,
 );
-router.patch("/:id",rentalController.rentalRequestStatus)
+router.patch(
+  "/landlord/:id",
+  auth(Role.LANDLORD, Role.ADMIN),
+  rentalController.rentalRequestStatus,
+);
 
 export const rentalRoutes = router;
 

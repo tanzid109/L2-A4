@@ -58,11 +58,108 @@ const createRentalRequestInDB = async (
   return rentalRequest;
 };
 
-const getMyRentalRequestFromDB = async () => {};
+const getMyRentalRequestFromDB = async (tenantId: string) => {
+  const requests = await prisma.rentalRequest.findMany({
+    where: {
+      tenantId,
+    },
+    include: {
+      property: {
+        include: {
+          category: true,
+          landlord: {
+            select: {
+              id: true,
+              name: true,
+              email: true,
+              phone: true,
+            },
+          },
+        },
+      },
+      payment: true,
+    },
+    orderBy: {
+      createdAt: "desc",
+    },
+  });
 
-const getAllLandlordRequestFromDB = async () => {};
+  return requests;
+};
 
-const rentalRequestStatusFromDB = async () => {};
+const getAllLandlordRequestFromDB = async (landlordId: string) => {
+  const requests = await prisma.rentalRequest.findMany({
+    where: {
+      property: {
+        landlordId,
+      },
+    },
+    include: {
+      tenant: {
+        select: {
+          id: true,
+          name: true,
+          email: true,
+          phone: true,
+        },
+      },
+      property: {
+        include: {
+          category: true,
+        },
+      },
+      payment: true,
+    },
+    orderBy: {
+      createdAt: "desc",
+    },
+  });
+
+  return requests;
+};
+
+const rentalRequestStatusFromDB = async (
+  landlordId: string,
+  role: string,
+  rentalRequestId: string,
+  status: "APPROVED" | "REJECTED",
+) => {
+  const rentalRequest = await prisma.rentalRequest.findUnique({
+    where: {
+      id: rentalRequestId,
+    },
+    include: {
+      property: true,
+    },
+  });
+
+  if (!rentalRequest) {
+    throw new Error("Rental request not found");
+  }
+
+  // Admin can manage everything
+  if (role !== "ADMIN" && rentalRequest.property.landlordId !== landlordId) {
+    throw new Error("Unauthorized");
+  }
+
+  if (rentalRequest.status !== "PENDING") {
+    throw new Error("This request has already been processed");
+  }
+
+  const updatedRequest = await prisma.rentalRequest.update({
+    where: {
+      id: rentalRequestId,
+    },
+    data: {
+      status,
+    },
+    include: {
+      property: true,
+    },
+  });
+
+  return updatedRequest;
+};
 
 export const rentalService = {
   createRentalRequestInDB,
