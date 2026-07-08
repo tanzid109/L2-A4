@@ -101,10 +101,35 @@ const getSingleRentalFromDB = async (rentalId: string) => {
   return rental;
 };
 
+const getAllPropertiesFromDB = async () => {
+  return prisma.property.findMany({
+    include: {
+      landlord: {
+        select: {
+          id: true,
+          name: true,
+          email: true,
+          phone: true,
+        },
+      },
+      category: {
+        select: {
+          id: true,
+          name: true,
+        },
+      },
+    },
+    orderBy: {
+      createdAt: "desc",
+    },
+  });
+};
+
 export const adminService = {
   getAllUsersFromDB,
   getSingleUserFromDB,
   updateUserStatusFromDB,
   getAllRentalsFromDB,
   getSingleRentalFromDB,
+  getAllPropertiesFromDB,
 };

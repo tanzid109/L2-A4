@@ -86,10 +86,24 @@ const getSingleRental = catchAsync(
   },
 );
 
+const getAllProperties = catchAsync(
+  async (req: Request, res: Response, next: NextFunction) => {
+    const properties = await adminService.getAllPropertiesFromDB();
+
+    sendResponse(res, {
+      success: true,
+      statusCode: httpStatus.OK,
+      message: "Properties fetched successfully",
+      data: properties,
+    });
+  },
+);
+
 export const adminController = {
   getAllUsers,
   getSingleUser,
   updateUserStatus,
   getAllRentals,
   getSingleRental,
+  getAllProperties,
 };
