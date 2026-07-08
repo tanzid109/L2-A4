@@ -4,17 +4,16 @@ import { propertyService } from "./properties.service";
 import { sendResponse } from "../../utils/sendResponse";
 import httpStatus from "http-status";
 
-const getAllProperties = catchAsync(
-  async (req: Request, res: Response, next: NextFunction) => {
-    const properties = await propertyService.getAllPropertiesFromDB();
-    sendResponse(res, {
-      success: true,
-      statusCode: httpStatus.OK,
-      message: "All properties fetched successfully",
-      data: properties,
-    });
-  },
-);
+const getAllProperties = catchAsync(async (req: Request, res: Response) => {
+  const result = await propertyService.getAllPropertiesFromDB(req.query);
+
+  sendResponse(res, {
+    success: true,
+    statusCode: httpStatus.OK,
+    message: "All properties fetched successfully",
+    data: result,
+  });
+});
 
 const getPropertyById = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
