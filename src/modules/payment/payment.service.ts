@@ -39,7 +39,7 @@ const createPaymentSessionInDB = async (
 
     customer_email: rental.tenant.email,
 
-    payment_method_types: ["card", "amazon_pay", "pay_by_bank", "paypal"],
+    payment_method_types: ["card"],
 
     line_items: [
       {

@@ -11,11 +11,7 @@ router.post(
   paymentController.createPaymentSession,
 );
 
-router.get(
-  "/success",
-  auth(Role.TENANT),
-  paymentController.completePaymentSuccess,
-);
+router.get("/success", paymentController.completePaymentSuccess);
 
 router.get("/", auth(Role.TENANT), paymentController.getMyPayments);
 
