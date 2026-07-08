@@ -103,3 +103,7 @@ A backend API for a rental property marketplace where landlords can list propert
 
 ## Database Diagram
 https://drawsql.app/teams/tanzid/diagrams/l2a4
+
+backend= https://rentnest-ecru.vercel.app
+admin email=superadmin@gmail.com
+pass=superadmin

@@ -120,9 +120,6 @@ const getUserFromDB = async (userId: string) => {
     omit: {
       password: true,
     },
-    include: {
-      properties:true
-    },
   });
   return user;
 };
