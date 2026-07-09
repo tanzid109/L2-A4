@@ -16,7 +16,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"name\":\"tenant\",\r\n    \"email\": \"tenant01@gmail.com\",\r\n    \"password\":\"123456\",\r\n    \"phone\":\"01712312312\",\r\n    \"role\":\"TENANT\"\r\n\r\n}",
+              "raw": "{\r\n    \"name\":\"landlord\",\r\n    \"email\": \"landlord@gmail.com\",\r\n    \"password\":\"123456\",\r\n    \"phone\":\"01712312312\",\r\n    \"role\":\"LANDLORD\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -44,7 +44,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"email\": \"tenant@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+              "raw": "{\r\n    \"email\": \"landlord@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -195,14 +195,14 @@
               }
             },
             "url": {
-              "raw": "{{baseUrl}}/api/category/193fca08-7200-4c19-8bcc-595a6697a3da",
+              "raw": "{{baseUrl}}/api/category/0ea680ef-0293-48bc-9f2b-306a09c72e3c",
               "host": [
                 "{{baseUrl}}"
               ],
               "path": [
                 "api",
                 "category",
-                "193fca08-7200-4c19-8bcc-595a6697a3da"
+                "0ea680ef-0293-48bc-9f2b-306a09c72e3c"
               ]
             }
           },
@@ -215,7 +215,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"name\":\"New building 1\"\r\n}",
+              "raw": "{\r\n    \"name\":\"New building\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -223,14 +223,14 @@
               }
             },
             "url": {
-              "raw": "{{baseUrl}}/api/category/4fd7bfc1-f91b-498e-bd99-6edbbe799791",
+              "raw": "{{baseUrl}}/api/category/0ea680ef-0293-48bc-9f2b-306a09c72e3c",
               "host": [
                 "{{baseUrl}}"
               ],
               "path": [
                 "api",
                 "category",
-                "4fd7bfc1-f91b-498e-bd99-6edbbe799791"
+                "0ea680ef-0293-48bc-9f2b-306a09c72e3c"
               ]
             }
           },
@@ -251,14 +251,14 @@
               }
             },
             "url": {
-              "raw": "{{baseUrl}}/api/category/4fd7bfc1-f91b-498e-bd99-6edbbe799791",
+              "raw": "{{baseUrl}}/api/category/0ea680ef-0293-48bc-9f2b-306a09c72e3c",
               "host": [
                 "{{baseUrl}}"
               ],
               "path": [
                 "api",
                 "category",
-                "4fd7bfc1-f91b-498e-bd99-6edbbe799791"
+                "0ea680ef-0293-48bc-9f2b-306a09c72e3c"
               ]
             }
           },
@@ -282,7 +282,7 @@
               "raw": "{\r\n    \"name\":\"New building 1\"\r\n}"
             },
             "url": {
-              "raw": "{{baseUrl}}/api/property?city=Dhaka",
+              "raw": "{{baseUrl}}/api/property",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -294,7 +294,7 @@
                 {
                   "key": "city",
                   "value": "Dhaka",
-                  "type": "text"
+                  "disabled": true
                 },
                 {
                   "key": "category",
@@ -337,7 +337,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"categoryId\": \"193fca08-7200-4c19-8bcc-595a6697a3da\",\r\n  \"title\": \"Modern 1 Bedroom Apartment new flat\",\r\n  \"description\": \"A spacious and fully furnished apartment located in the heart of Dhaka. It features 2 bedrooms, 2 bathrooms, a balcony, and 24/7 security.\",\r\n  \"address\": \"House 12, Road 5, Dhanmondi\",\r\n  \"city\": \"Dhaka\",\r\n  \"price\": \"25000\",\r\n  \"bedrooms\": 2,\r\n  \"bathrooms\": 2,\r\n  \"status\": \"AVAILABLE\"\r\n}",
+              "raw": "{\r\n  \"categoryId\": \"0ea680ef-0293-48bc-9f2b-306a09c72e3c\",\r\n  \"title\": \"Modern 1 Bedroom Apartment new flat in dhaka\",\r\n  \"description\": \"A spacious and fully furnished apartment located in the heart of Dhaka. It features 2 bedrooms, 2 bathrooms, a balcony, and 24/7 security.\",\r\n  \"address\": \"House 12, Road 5, Dhanmondi\",\r\n  \"city\": \"Dhaka\",\r\n  \"price\": \"25000\",\r\n  \"bedrooms\": 2,\r\n  \"bathrooms\": 2,\r\n  \"status\": \"AVAILABLE\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -376,7 +376,7 @@
               }
             },
             "url": {
-              "raw": "{{baseUrl}}/api/landlord/properties/b8d87c73-40df-4638-b071-4a110b2c109a",
+              "raw": "{{baseUrl}}/api/landlord/properties/32f9a034-2cdf-4850-826d-b1b9bd21f901",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -384,7 +384,7 @@
                 "api",
                 "landlord",
                 "properties",
-                "b8d87c73-40df-4638-b071-4a110b2c109a"
+                "32f9a034-2cdf-4850-826d-b1b9bd21f901"
               ]
             }
           },
@@ -429,7 +429,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"categoryId\": \"6b1b6c84-84f4-4d74-9c2d-2d8c5b9d8f10\",\r\n  \"title\": \"Modern 2 Bedroom Apartment 2\",\r\n  \"description\": \"A spacious and fully furnished apartment located in the heart of Dhaka. It features 2 bedrooms, 2 bathrooms, a balcony, and 24/7 security.\",\r\n  \"address\": \"House 12, Road 5, Dhanmondi\",\r\n  \"city\": \"Dhaka\",\r\n  \"price\": \"25000\",\r\n  \"bedrooms\": 2,\r\n  \"bathrooms\": 2,\r\n  \"status\": \"AVAILABLE\"\r\n}",
+              "raw": "{\r\n  \"categoryId\": \"0ea680ef-0293-48bc-9f2b-306a09c72e3c\",\r\n  \"title\": \"Modern 2 Bedroom Apartment\",\r\n  \"description\": \"A spacious and fully furnished apartment located in the heart of Dhaka. It features 2 bedrooms, 2 bathrooms, a balcony, and 24/7 security.\",\r\n  \"address\": \"House 12, Road 5, Dhanmondi\",\r\n  \"city\": \"Dhaka\",\r\n  \"price\": \"25000\",\r\n  \"bedrooms\": 2,\r\n  \"bathrooms\": 2,\r\n  \"status\": \"AVAILABLE\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -437,7 +437,7 @@
               }
             },
             "url": {
-              "raw": "{{baseUrl}}/api/landlord/properties/544f657b-e9d9-4580-b973-97877f07c852",
+              "raw": "{{baseUrl}}/api/landlord/properties/fc2f5fd5-1584-420a-94fa-5c5dc6144076",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -445,7 +445,7 @@
                 "api",
                 "landlord",
                 "properties",
-                "544f657b-e9d9-4580-b973-97877f07c852"
+                "fc2f5fd5-1584-420a-94fa-5c5dc6144076"
               ]
             }
           },
@@ -461,7 +461,7 @@
               "raw": "{\r\n  \"categoryId\": \"6b1b6c84-84f4-4d74-9c2d-2d8c5b9d8f10\",\r\n  \"title\": \"Modern 2 Bedroom Apartment 2\",\r\n  \"description\": \"A spacious and fully furnished apartment located in the heart of Dhaka. It features 2 bedrooms, 2 bathrooms, a balcony, and 24/7 security.\",\r\n  \"address\": \"House 12, Road 5, Dhanmondi\",\r\n  \"city\": \"Dhaka\",\r\n  \"price\": \"25000\",\r\n  \"bedrooms\": 2,\r\n  \"bathrooms\": 2,\r\n  \"status\": \"AVAILABLE\"\r\n}"
             },
             "url": {
-              "raw": "{{baseUrl}}/api/landlord/properties/544f657b-e9d9-4580-b973-97877f07c852",
+              "raw": "{{baseUrl}}/api/landlord/properties/fc2f5fd5-1584-420a-94fa-5c5dc6144076",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -469,7 +469,7 @@
                 "api",
                 "landlord",
                 "properties",
-                "544f657b-e9d9-4580-b973-97877f07c852"
+                "fc2f5fd5-1584-420a-94fa-5c5dc6144076"
               ]
             }
           },
@@ -521,7 +521,7 @@
               }
             },
             "url": {
-              "raw": "{{baseUrl}}/api/rentals/landlord/3e714719-c2cf-4540-a553-1b53110a077a",
+              "raw": "{{baseUrl}}/api/rentals/landlord/afd39559-7cad-409a-9388-806ebedbed29",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -529,7 +529,7 @@
                 "api",
                 "rentals",
                 "landlord",
-                "3e714719-c2cf-4540-a553-1b53110a077a"
+                "afd39559-7cad-409a-9388-806ebedbed29"
               ]
             }
           },
@@ -555,14 +555,14 @@
               }
             },
             "url": {
-              "raw": "{{baseUrl}}/api/rentals/b109662f-05b1-4032-ad6e-c88c0b484e19",
+              "raw": "{{baseUrl}}/api/rentals/32f9a034-2cdf-4850-826d-b1b9bd21f901",
               "host": [
                 "{{baseUrl}}"
               ],
               "path": [
                 "api",
                 "rentals",
-                "b109662f-05b1-4032-ad6e-c88c0b484e19"
+                "32f9a034-2cdf-4850-826d-b1b9bd21f901"
               ]
             }
           },
@@ -607,7 +607,7 @@
               }
             },
             "url": {
-              "raw": "{{baseUrl}}/api/payments/create/3e714719-c2cf-4540-a553-1b53110a077a",
+              "raw": "{{baseUrl}}/api/payments/create/afd39559-7cad-409a-9388-806ebedbed29",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -615,7 +615,7 @@
                 "api",
                 "payments",
                 "create",
-                "3e714719-c2cf-4540-a553-1b53110a077a"
+                "afd39559-7cad-409a-9388-806ebedbed29"
               ]
             }
           },
@@ -671,14 +671,14 @@
               }
             },
             "url": {
-              "raw": "{{baseUrl}}/api/reviews/884bd670-8326-49ec-a594-28f348312767",
+              "raw": "{{baseUrl}}/api/reviews/32f9a034-2cdf-4850-826d-b1b9bd21f901",
               "host": [
                 "{{baseUrl}}"
               ],
               "path": [
                 "api",
                 "reviews",
-                "884bd670-8326-49ec-a594-28f348312767"
+                "32f9a034-2cdf-4850-826d-b1b9bd21f901"
               ]
             }
           },
@@ -732,15 +732,14 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{baseUrl}}/api/admin/properties/usas",
+              "raw": "{{baseUrl}}/api/admin/properties",
               "host": [
                 "{{baseUrl}}"
               ],
               "path": [
                 "api",
                 "admin",
-                "properties",
-                "usas"
+                "properties"
               ]
             }
           },
@@ -752,7 +751,7 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{baseUrl}}/api/admin/users/645a5c0d-3cac-4e0b-9a39-75515f17c939",
+              "raw": "{{baseUrl}}/api/admin/users/7a760fa3-0602-42f5-9f41-019a31a37fd4",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -760,7 +759,7 @@
                 "api",
                 "admin",
                 "users",
-                "645a5c0d-3cac-4e0b-9a39-75515f17c939"
+                "7a760fa3-0602-42f5-9f41-019a31a37fd4"
               ]
             }
           },
@@ -773,7 +772,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"status\":\"BANNED\"\r\n}",
+              "raw": "{\r\n    \"status\":\"ACTIVE\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -781,7 +780,7 @@
               }
             },
             "url": {
-              "raw": "{{baseUrl}}/api/admin/users/645a5c0d-3cac-4e0b-9a39-75515f17c939",
+              "raw": "{{baseUrl}}/api/admin/users/7a760fa3-0602-42f5-9f41-019a31a37fd4",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -789,7 +788,7 @@
                 "api",
                 "admin",
                 "users",
-                "645a5c0d-3cac-4e0b-9a39-75515f17c939"
+                "7a760fa3-0602-42f5-9f41-019a31a37fd4"
               ]
             }
           },
@@ -844,7 +843,7 @@
               }
             },
             "url": {
-              "raw": "{{baseUrl}}/api/admin/rentals/8e75f937-a018-43e4-b799-76d52fe8a333",
+              "raw": "{{baseUrl}}/api/admin/rentals/afd39559-7cad-409a-9388-806ebedbed29",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -852,7 +851,7 @@
                 "api",
                 "admin",
                 "rentals",
-                "8e75f937-a018-43e4-b799-76d52fe8a333"
+                "afd39559-7cad-409a-9388-806ebedbed29"
               ]
             }
           },
