@@ -1,5 +1,11 @@
 # RentNest 🏠
 
+## Database Diagram
+https://drawsql.app/teams/tanzid/diagrams/l2a4
+
+## Backend Live 
+backend= https://rentnest-ecru.vercel.app
+
 **"Find & List Rental Properties with Ease"**
 
 A backend API for a rental property marketplace where landlords can list properties, tenants can browse and request rentals, and admins oversee the platform.
@@ -100,10 +106,3 @@ A backend API for a rental property marketplace where landlords can list propert
 - **RentalRequests** - Rental requests with status flow
 - **Payments** - Payment transactions (Stripe)
 - **Reviews** - Tenant reviews for properties
-
-## Database Diagram
-https://drawsql.app/teams/tanzid/diagrams/l2a4
-
-backend= https://rentnest-ecru.vercel.app
-admin email=superadmin@gmail.com
-pass=superadmin
