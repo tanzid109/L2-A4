@@ -28,7 +28,7 @@ const createPaymentSession = catchAsync(
 
 const handleWebhook = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
-      console.log("Webhook hit");
+    console.log("Webhook hit");
     const signature = req.headers["stripe-signature"] as string;
     const payload = req.body as Buffer;
 

@@ -19,5 +19,4 @@ router.delete(
   landlordController.deletePropertyById,
 );
 
-
 export const landlordRoutes = router;

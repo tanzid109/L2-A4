@@ -53,7 +53,7 @@ const updatePropertyByIdInDB = async (
   id: string,
   role: string,
   userId: string,
-  payload: Partial<ILandlord>
+  payload: Partial<ILandlord>,
 ) => {
   if (role !== "LANDLORD") {
     throw new Error("Only landlords can update properties");
@@ -79,7 +79,11 @@ const updatePropertyByIdInDB = async (
   return updatedProperty;
 };
 
-const deletePropertyByIdFromDB = async (id: string, role: string, userId: string) => {
+const deletePropertyByIdFromDB = async (
+  id: string,
+  role: string,
+  userId: string,
+) => {
   if (role !== "LANDLORD") {
     throw new Error("Only landlords can delete properties");
   }

@@ -62,7 +62,7 @@ const rentalRequestStatus = catchAsync(async (req: Request, res: Response) => {
   const result = await rentalService.rentalRequestStatusFromDB(
     landlordId as string,
     role as string,
-    id as string ,
+    id as string,
     status,
   );
 

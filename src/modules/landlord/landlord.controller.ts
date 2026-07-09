@@ -62,7 +62,11 @@ const deletePropertyById = catchAsync(
     const id = req.params.id;
     const role = req.user?.role as string;
     const userId = req.user?.id as string;
-    await landlordService.deletePropertyByIdFromDB(id as string, role as string, userId as string);
+    await landlordService.deletePropertyByIdFromDB(
+      id as string,
+      role as string,
+      userId as string,
+    );
     sendResponse(res, {
       success: true,
       statusCode: httpStatus.OK,
@@ -75,7 +79,9 @@ const deletePropertyById = catchAsync(
 const myProperties = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
     const userId = req.user?.id as string;
-    const properties = await landlordService.myPropertiesFromDB(userId as string);
+    const properties = await landlordService.myPropertiesFromDB(
+      userId as string,
+    );
     sendResponse(res, {
       success: true,
       statusCode: httpStatus.OK,

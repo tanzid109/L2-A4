@@ -25,13 +25,3 @@ router.patch(
 );
 
 export const rentalRoutes = router;
-
-// POST   /api/rentals              // Tenant Apply
-
-// GET    /api/rentals/my-requests  // Tenant
-
-// GET    /api/rentals/landlord     // Landlord
-
-// PATCH  /api/rentals/:id          // Approve/Reject
-
-// GET    /api/admin/rentals        // Admin
