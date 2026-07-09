@@ -42,7 +42,7 @@ app.use("/api/landlord/properties", landlordRoutes);
 app.use("/api/rentals", rentalRoutes);
 app.use("/api/payments", paymentRoutes);
 app.use("/api/reviews", reviewRoutes);
-app.use("/api/admin",adminRoutes)
+app.use("/api/admin", adminRoutes);
 
 app.use(notFound);
 app.use(globalErrorHandler);
